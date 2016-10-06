@@ -120,9 +120,10 @@
                         </div>
                     </div>
                         <div class="btn-group btn-group-justified top-buffer">
-                            <a class="btn  btn-warning" ng-click="quiz.questionAnswered()">{{quiz.nextButton}}</a>
+                            <a class="btn  btn-success" ng-click="quiz.questionAnswered()">{{quiz.nextButton}}</a>
                         </div>
                     </div>
+                    <button class="btn btn-primary btn-lg" ng-hide="quiz.finalise" ng-click="quiz.reset()">Nazaj na začetno stran!</button>
 
                     <div class="well well-sm" ng-show="quiz.finalise">
                         <div class="row">
@@ -214,16 +215,14 @@
                                    </div>
                                </div>
                            </div>
-
-
                        </div>
                    </div>
-               </div><!-- well -->
-                <!-- ng-click calling the reset method on the controller
-               <button class="btn btn-primary btn-lg" ng-click="results.reset()">Go Back To Facts</button>
-                -->
+                </div><!-- well -->
+                <button class="btn btn-primary btn-lg" ng-click="results.reset()">Nazaj na začetno stran!</button>
            </div> <!-- row -->
         </div> <!-- results controler -->
+
+
     </div><!-- container div-->
 
 

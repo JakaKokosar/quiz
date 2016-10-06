@@ -10,9 +10,10 @@
 
             this.handler = handler;
             this.activeQuestion = 0;
-            this.getAnswerClass = getAnswerClass;
-            this.setActiveQuestion = setActiveQuestion;
-            this.calculatePerc = calculatePerc;
+            this.getAnswerClass = getAnswerClass; //Named function below
+            this.setActiveQuestion = setActiveQuestion; //Named function below
+            this.calculatePerc = calculatePerc; //Named function below
+            this.reset = reset;
 
 
             function calculatePerc(){
@@ -31,6 +32,11 @@
                     return "bg-danger";
                 }
 
+            }
+
+            function reset(){
+                handler.ChangeState("results", false);
+                handler.numCorrect = 0;
             }
 
         }

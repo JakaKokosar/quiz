@@ -16,9 +16,16 @@
         this.questionAnswered = questionAnswered; //Named function below
         this.setActiveQuestion = setActiveQuestion; //Named function below
         this.selectAnswer = selectAnswer; //Named function below
-        this.finaliseAnswers = finaliseAnswers; //Named function below
+        this.finaliseAnswers = finaliseAnswers; //Named function
+        this.reset = reset; //Named function below
 
         var progress = 0;
+
+        function reset(){
+            handler.ChangeState("quiz", false);
+            handler.numCorrect = 0;
+
+        }
 
         function setActiveQuestion(index){
 
